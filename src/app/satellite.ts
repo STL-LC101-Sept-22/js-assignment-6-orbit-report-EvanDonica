@@ -18,10 +18,8 @@ export class Satellite {
 	
 	isSpaceDebris(): boolean {
 		if(this.type === 'Space Debris'){
-			this.changeColor = true
 			return true
 		}else{
-			this.changeColor = false
 			return false
 		}
    }
