@@ -50,13 +50,13 @@ export class AppComponent {
 
 		for(let i=0; i < this.sourceList.length; i++) {
 			let type = this.sourceList[i].type.toLowerCase();
-			if (type.indexOf(searchTerm) >= 0) {
+			if (type.indexOf(searchTerm) >= 0 && !matchingSatellites.includes(this.sourceList[i])) {
 				matchingSatellites.push(this.sourceList[i]);
 			}
 		}
 		for(let i=0; i < this.sourceList.length; i++) {
 			let orbit = this.sourceList[i].orbitType.toLowerCase();
-			if (orbit.indexOf(searchTerm) >= 0) {
+			if (orbit.indexOf(searchTerm) >= 0 && !matchingSatellites.includes(this.sourceList[i])) {
 				matchingSatellites.push(this.sourceList[i]);
 			}	
 		}
